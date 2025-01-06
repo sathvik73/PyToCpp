@@ -30,7 +30,10 @@ async function convertPythonToCpp(pythonCode, apiKey) {
             `Convert this Python code to C++:\n${pythonCode} using <bits/stdc++.h> and don't send any text other than code itself`
         ]);
 
-        let ans = result.response.text().slice(7, -4);
+        let ans = result.response.text().slice(7, -1);
+        while (ans.endsWith("`")) {
+            ans = ans.slice(0, -1);
+        }
         return ans;
     } catch (error) {
         throw new Error(`API Request Failed: ${error.message}`);
