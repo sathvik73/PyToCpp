@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+	  "module": "commonjs",         // Use commonjs module resolution for Node.js
+	  "target": "ES6",              // Set target to ES6 for compatibility with modern JavaScript features
+	  "lib": ["es6"],               // Include the ES6 library for compatibility
+	  "moduleResolution": "node",   // Use node-style resolution for modules
+	  "strict": true,               // Enable strict type checking (recommended for extensions)
+	  "esModuleInterop": true,      // Allow default imports from modules with no default export
+	  "skipLibCheck": true          // Skip checking library files for faster compilation
+	},
+	"exclude": [
+	  "node_modules"                // Exclude node_modules folder
+	]
+}
