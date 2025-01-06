@@ -31,7 +31,7 @@ async function convertPythonToCpp(pythonCode, apiKey) {
         ]);
 
         let ans = result.response.text().slice(7, -1);
-        while (ans.endsWith("`")) {
+        while (! ans.endsWith("}")){
             ans = ans.slice(0, -1);
         }
         return ans;
